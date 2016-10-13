@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>English Tytor</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <!--
+    <link rel="stylesheet" href="themes/blue/style.css" type="text/css" id="" media="print, projection, screen" />
+    -->
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <!-- <script src="js/jquery.tablesorter.js"></script> -->
+
+</head>
+<body>
+<h3>Tytor v0.4</h3>
+
+<div class="main">
+    <!--- Vocabularies --->
+    <div class="action">
+        <input type="button" value="3000 words" onclick="switchToWords()" id="www3000z">&nbsp
+        <input type="button" value="Phrasal Verbs" name="phverb" onclick="switchToPhrasal()" id="phverbz">&nbsp
+        <input type="button" value="Irregular Verbs"  name="irverb" onclick="switchToIrregular()" id="irverbz">&nbsp
+    </div>
+    <!--- Languages --->
+    <div id="options">
+        <input type="image" onclick="switchUkr()" src="images/f-ukr.jpg" title="Switch to Ukrainian" id="ukr">
+        <!--    <input type="image" onclick="switchUsa()" src="images/f-usa.jpg" title="Switch to English"> -->
+        <input type="image" onclick="switchRus()" src="images/f-rus.jpg" title="Switch to Russian" id="rus">
+        <input type="image" onclick="callSetup()" src="images/setup.jpg" title="Settings" alt="Setup" id="set">
+    </div>
+    <!--- Show settings --->
+    <br>
+
+    <div class="showlinesettings" id="showlinesettings">May be there is an error</div>
+
+    <!--- Rebuild Start --->
+    <div class="self w3000"></div>
+    <!--- Rebuild End --->
+
+    <div class="self listofwords">                                                         <!-- listofwords whoVisible = 1 -->
+        <h4>List of words</h4>
+        <div class="filter-buttons">
+            <input type="button" class="filter" onclick="backWords3000()" value="Back" title="Back to main screen">
+        </div>
+        <div id="filters"></div>
+        <div id="suffixdescr">*</div>
+        <div id="allist"></div>
+        <div class="tableplace"></div>
+    </div>
+
+    <div class="self setup">                                                            <!-- Setup whoVisible = 2 -->
+        <h4>Setup</h4>
+        <h6>QA 00000 Quality Assurance [əˈʃuərəns]</h6>
+
+
+        <div class="settings">May be there is error</div>
+        <br>
+        <label for="poweroftest"><div class="errormessage">&nbsp;</div>Number of answers for test<strong class="aster"> *</strong></label>
+        <input type="text" class="textinput" name="poweroftest" id="poweroftest" value="">
+        <br>
+        <label for="delayafter"><div class="errormessage">&nbsp;</div>Delay after right answer<strong class="aster"> *</strong></label>
+        <input type="text" class="textinput" name="delayafter" id="delayafter" value="">
+        <br>
+        <label for="delaybefore"><div class="errormessage">&nbsp;</div>Delay before show next word<strong class="aster"> *</strong></label>
+        <input type="text" class="textinput" name="delaybefore" id="delaybefore" value="">
+        <br><br>
+        <div class="obertka">
+            <div class="leftblock">
+                Select the display mode:<br><br>
+                <input name="viewword" type="radio" value="Short" title="Show only english word and translation" onclick="switchView('Short')">Short<br>
+                <input name="viewword" type="radio" value="Big" onclick="switchView('Big')">Big<br>
+                <input name="viewword" type="radio" value="Deep" checked onclick="switchView('Deep')">Deep<br>
+                <input name="viewword" type="radio" value="Custom" onclick="switchView('Custom')">Custom<br><br>
+            </div>
+            <div class="rightblock">
+                <fieldset title="Show elements on main form">
+                    <legend>Show elements on main form: </legend>
+                    <div class="blockofshow">
+                        <label for="showengimage">Image</label>
+                        <input type="checkbox" id="showengimage" name="showengimage" checked>
+                        <br><br>
+                        <label for="showenglinks">English Links</label>
+                        <input type="checkbox" id="showenglinks" name="showenglinks" checked>
+                        <br><br>
+                        <label for="showtrrlinks">Translate Links</label>
+                        <input type="checkbox" id="showtrrlinks" name="showtrrlinks" checked>
+                        <br><br>
+                        <label for="showsynonyms">Synonyms</label>
+                        <input type="checkbox" id="showsynonyms" name="showsynonyms" checked class="righttd">
+                        <br><br>
+                        <label for="showexamples">Examples</label>
+                        <input type="checkbox" id="showexamples" name="showexamples" checked class="righttd">
+                        <br><br>
+                        <label for="showbothlang">Both Languages</label>
+                        <input type="checkbox" id="showbothlang" name="showbothlang" checked class="righttd">
+                        <br>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="match">
+            <fieldset title="Words for matching">
+                <legend>Words for matching: </legend>
+                3000 Words:<br>
+                <label for="word1">w1:</label>
+                <input type="text" id="word1" value="">
+                <label for="word2">w2:</label>
+                <input type="text" id="word2" value="">
+                <label for="word3">w3:</label>
+                <input type="text" id="word3" value="">
+                <label for="word4">w4:</label>
+                <input type="text" id="word4" value="">
+                <label for="word5">w5:</label>
+                <input type="text" id="word5" value="">
+                <br><br>
+                Phrasal Verbs:<br>
+                <label for="phrl1">p1:</label>
+                <input type="text" id="phrl1" value="">
+                <label for="phrl2">p2:</label>
+                <input type="text" id="phrl2" value="">
+                <label for="phrl3">p3:</label>
+                <input type="text" id="phrl3" value="">
+                <label for="phrl4">p4:</label>
+                <input type="text" id="phrl4" value="">
+                <label for="phrl5">p5:</label>
+                <input type="text" id="phrl5" value="">
+                <br><br>
+                Irregular Verbs:<br>
+                <label for="irrg1">p1:</label>
+                <input type="text" id="irrg1" value="">
+                <label for="irrg2">p2:</label>
+                <input type="text" id="irrg2" value="">
+                <label for="irrg3">p3:</label>
+                <input type="text" id="irrg3" value="">
+                <label for="irrg4">p4:</label>
+                <input type="text" id="irrg4" value="">
+                <label for="irrg5">p5:</label>
+                <input type="text" id="irrg5" value="">
+                <br>
+            </fieldset>
+        </div>
+        <br>
+        <div class="done" ><input type="button" onclick="doneSetup()" value="Done"></div>
+    </div>
+
+    <!--- Rebuild Start --->
+    <div class="self p3000"></div>                                                      <!-- Phrasal Verbs whoVisible = 3 -->
+    <!--- Rebuild End --->
+
+    <div class="self listofphrasal">                                                      <!-- PhrasalList whoVisible = 4 -->
+        <h4>List of Phrasal Verbs</h4>
+        <div class="filter-buttons">
+            <div class="header" >Filters:&nbsp;&nbsp;</div>
+            <input type="button" class="filter" id="showverbs" onclick="showPhrasalList(0)" value="verb">
+            <input type="button" class="filter" id="showkeys" onclick="showPhrasalList(1)" value="key">
+            <input type="button" class="filter" onclick="backPhrasal()" value="Back" title="Back to main screen">
+        </div>
+        <h5 id="commonHeader">commonHeader</h5>
+        <div class="tableplace"></div>
+    </div>
+
+    <div class="self test">                                                         <!-- Test whoVisible = 5 -->
+        <h4>Test</h4>
+        <div id="stat"><br>
+            <input type="button" id="engukr" onclick="showTest('engukr')" value="Eng-Ukr">
+            <input type="button" id="engrus" onclick="showTest('engrus')" value="Eng-Rus">
+            <input type="button" id="ukreng" onclick="showTest('ukreng')" value="Ukr-Eng">
+            <input type="button" id="ruseng" onclick="showTest('ruseng')" value="Rus-Eng">
+            Answers: <b id="questions">0</b>, Right: <b id="rightanswers">0</b>, Wrong: <b id="wronganswers">0</b><br>
+        </div>
+        <div class="filter-buttons">
+            <input type="button" class="filter" id="backtest" onclick="backTest()" value="Back">
+            <input type="button" class="filter" id="showstats" onclick="showStat()" value="Statistics">
+        </div>
+        <br>
+        <table>
+            <tr><th id="headquestion">&nbsp;English Word&nbsp;</th><th  id="headanswer">&nbsp;Please Select Answer&nbsp;</th></tr>
+            <tr>
+                <td id="testword" title="Test Word">Question</td>
+                <td>
+                    <div id="variants"><ul id="initTest"></ul></div>
+                    <div id="shortTimeExample">Just Example</div>
+                </td>
+            </tr>
+        </table>
+        <div class="smallerror">&nbsp;</div>
+        <div class="smallhelp">You can <strong class="seemsaslink"  onclick="callSetup()" >adjust</strong> the delay</div>
+    </div>
+
+    <div class="self stat">                                                     <!-- Stat whoVisible = 6 -->
+        <h4>Statistics:</h4>
+        <div id="statfull"></div>
+        <div class="done" >
+            <input type="button" onclick="doneStat()" value="Done">
+        </div>
+    </div>
+
+    <!--- Rebuild Start --->
+    <div class="self i3000"></div>                                              <!-- Irregular whoVisible = 7 -->
+    <!--- Rebuild End --->
+
+    <div class="self listofirregular">                                                         <!-- listofwords whoVisible = 8 -->
+        <h4>List of Irregular Verbs</h4>
+        <div class="filter-buttons">
+            <input type="button" class="filter" onclick="backIrregular()" value="Back" title="Back to main screen">
+        </div>
+        <div class="tableplace"></div>
+    </div>
+
+</div>
+<!--  -->
+</body>
+
+<script src="js/js.cookie.js"></script>
+<script src="vocab/warr.js"></script>
+<script src="vocab/parr.js"></script>
+<script src="vocab/sarr.js"></script>
+<script src="vocab/iarr.js"></script>
+<script src="vocab/links.js"></script>
+<script src="js/initarrays.js"></script>
+<script src="js/core.js"></script>
+<script src="js/initvars.js"></script>
+<script src="js/bricks.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/switches.js"></script>
+<script src="js/mainform.js"></script>
+<script src="js/lists.js"></script>
+<script src="js/englishtest.js"></script>
+</html>

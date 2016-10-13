@@ -1,0 +1,321 @@
+body {
+    font-family: Verdana, Arial, Helvetica, serif;
+    position: relative;
+    background-color: lightgoldenrodyellow;
+    font-size: 16px;
+}
+input {
+    font-size: 16px;
+}
+.self {
+
+    top: 120px;
+    background-color: papayawhip;
+    position: absolute;
+    margin: 5px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid chocolate;
+}
+h3 {
+    margin: 0;
+    padding: 5px;
+    display: inline-block;
+}
+h4 {
+    display: inline-block;
+    width: 300px;
+    background-color: papayawhip;
+    position: absolute;
+    border: 1px solid chocolate;
+    color: chocolate;
+    top: -40px;
+    padding: 5px;
+}
+
+h5 {
+    margin-top: 1px;
+}
+h6 {
+    margin: 1px;
+	color:gold;
+}
+.header {
+    display: inline-block;
+    width: 50px;
+}
+.filter-buttons  {
+    text-align: right;
+}
+.filter {
+    display: inline-block;
+    width: 80px;
+}
+label  {
+    width: 260px;
+    display: inline-block;
+}
+
+.done {
+    width: 430px;
+    text-align:right;
+}
+#testword {
+    background-color: navajowhite;
+    font-weight: bold;
+}
+#stat {
+    /* display: inline-block;*/
+}
+#shortTimeExample {
+    display: block;
+    min-height: 150px;
+    vertical-align: middle;
+    text-align: center;
+}
+#variants {
+    min-height: 119px;
+}
+#verbheader {
+    width: 100px;
+}
+.verbrus {
+    width: 180px;
+}
+#headquestion{
+    width:140px;
+    background-color: navajowhite;    
+}
+#headanswer{
+    width:340px;  
+}
+ul {
+    margin-right: 20px;
+}
+li {
+    cursor: pointer;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+#questions {
+    color: blue;
+}
+#rightanswers {
+    color: green;
+}
+#wronganswers {
+    color: red;
+}
+.smallhelp {
+    text-align: right;
+    font-size: 80%;
+}
+.smallerror{
+    text-align: left;
+    font-size: 80%;
+    color: red;
+}
+.seemsaslink{
+    text-decoration: underline;
+    font-weight: normal;
+    cursor: pointer;
+}
+.wronganswer {
+    color: red;
+    font-weight: bold;
+}
+.rightanswer {
+    color: green;
+}
+.description {
+    text-align: left;
+    padding-left: 15px;
+    font-size: 100%;
+    width: 150px;
+}
+#options {
+    display:inline-block;
+    text-align:right;
+    width: 230px;
+    padding: 5px 20px 5px 20px;
+}
+.action {
+    text-align: left;
+    font-size: 100%;
+    display: inline;      
+}
+.showlinesettings {
+    text-align: left;
+    font-size: 100%;
+    display: inline; 
+    padding-left: 5px;
+}
+.settings {
+    text-align: right;
+    font-size: 100%;
+}
+#suffixdescr{
+    display: inline;
+    font-size: 100%;
+}
+.areabuttons{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#ukr {
+    border: 1px solid lightgoldenrodyellow;
+}
+#rus {
+    border: 1px solid lightgoldenrodyellow;
+}
+.blockofshow{
+    /* border: 1px solid chocolate; */
+    padding:5px;
+}
+.noshow{
+    display:none;
+}
+.onelanguage{
+    display:none;
+}
+a img {
+}
+.rightblock{
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.leftblock{
+    width: 45%;
+    display: table-cell;
+    vertical-align: middle;
+}
+fieldset {
+    /* width: 50%; */
+}
+.blockdisabled {
+    color: lightgray;
+
+}
+fieldset label  {
+    width: 150px;
+}
+.obertka{
+    padding: 0 0;
+}
+.aster{
+    color:red;
+}
+input.error{
+    background-color: coral;
+}
+.errormessage{
+    font-size: 100%;
+}
+div.match{
+    margin-top: 10px;
+}
+div.match label{
+    width: 30px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+div.match input{
+    width: 64px;
+}
+.study {
+    font-weight: bold;
+}
+
+/* ------------ Table ----------- */
+
+table {
+    border: 1px solid chocolate;
+    background-color: navajowhite;       
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 200%;
+}
+th, td {
+    border: 1px solid chocolate;
+    padding: 5px;
+    text-align: center;
+}
+th {
+    background-color: navajowhite;
+    color: chocolate;
+} 
+td {
+    height: 40px;
+}
+.grupped td:nth-child(4n) {
+    background-color: #fff666;
+    font-size: 100%;
+    text-align:justify;
+}
+.grupped td:nth-child(4n-1) {
+    background-color: lightcyan;
+}
+.grupped td:nth-child(4n-2) {
+    background-color: navajowhite;
+}
+.grupped td:nth-child(4n-3) {
+    background-color: navajowhite;
+    text-align: right;
+    width: 40px;
+    font-size: 100%;
+}
+td.word {
+    color: blue;
+}
+td div.eng {
+    color: blue;
+    font-weight: bold;
+
+}
+
+td.ukr {
+    color: blue;
+
+    vertical-align: middle;
+}
+td.rus {
+    color: green;
+
+    vertical-align: middle;
+}
+td.links {
+    color: blue;
+    font-size: 100%;
+    width:50px;
+    background-color: white;
+}
+td#description, td.example {
+    height: 80px;
+}
+.maintable {
+   /* display: none;*/
+}
+
+td.englmain {
+    background-color: white;
+}
+th.maincolumn {
+    background-color: white;
+    width: 30%;
+}
+.yet {
+    color: lightgrey;
+
+}
+.yes {
+    color: black;
+    font-size: 100%;
+}
+.action input{
+    background-color: yellow;
+    /*background-color: #fff5c3;*/
+}
+fieldset{
+    border: 1px solid chocolate;
+}
